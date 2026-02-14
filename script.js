@@ -14,5 +14,11 @@ envelope.addEventListener("click", () => {
 yesBtn.addEventListener("click", () => {
   letter.style.display = "none";
   video.style.display = "block";
-  video.play();
+
+  video.muted = false;
+  video.volume = 1;
+
+  video.play().catch(() => {
+    alert("Tap screen once for sound 🔊");
+  });
 });
