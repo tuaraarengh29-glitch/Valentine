@@ -1,82 +1,95 @@
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f6eaea;
-  font-family: sans-serif;
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f6eaea;
+font-family:sans-serif;
 }
 
-/* Envelope */
-#envelope-container {
-  text-align: center;
-  cursor: pointer;
-  margin-top: -40px;
+/* envelope */
+#envelope-container{
+text-align:center;
+cursor:pointer;
+margin-top:-40px;
 }
 
-#envelope {
-  width: 200px;
+#envelope{width:200px}
+
+/* letter */
+#letter-container{
+display:none;
+position:fixed;
+inset:0;
+justify-content:center;
+align-items:center;
 }
 
-/* Letter Screen */
-#letter-container {
-  display: none;
-  position: fixed;
-  inset: 0;
-  justify-content: center;
-  align-items: center;
+/* window */
+.letter-window{
+width:300px;
+padding:20px;
+background:white;
+border-radius:20px;
+text-align:center;
 }
 
-/* Window */
-.letter-window {
-  width: 300px;
-  padding: 20px;
-  background: white;
-  border-radius: 20px;
-  text-align: center;
+/* bouquet bounce */
+.bouquet{
+width:200px;
+animation:bounce 1.5s infinite;
 }
 
-/* Bouquet */
-.bouquet {
-  width: 200px;
-  animation: bounce 1.5s infinite;
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
 }
 
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+/* question */
+.question{
+margin:10px 0;
 }
 
-/* Question */
-.question {
-  margin: 10px 0;
-  font-size: 22px;
+/* buttons */
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
 }
 
-/* Buttons */
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.yes-btn,.no-btn{
+width:100px;
+cursor:pointer;
+transition:transform 0.2s ease;
 }
 
-.yes-btn, .no-btn {
-  width: 100px;
-  cursor: pointer;
+/* video */
+.love-video{
+width:250px;
+display:none;
+margin-top:10px;
+border-radius:12px;
 }
 
-/* Video inside window */
-.love-video {
-  width: 250px;
-  border-radius: 12px;
-  display: none;
-  margin-top: 10px;
+/* message */
+.love-message{
+display:none;
+margin-top:10px;
 }
 
-/* Message */
-.love-message {
-  display: none;
-  margin-top: 10px;
-  font-size: 18px;
+/* confetti */
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+background:red;
+animation:fall 3s linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(100vh);
+opacity:0;
+}
 }
