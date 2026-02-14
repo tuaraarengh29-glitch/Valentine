@@ -8,13 +8,10 @@ body {
 }
 
 /* envelope */
-#envelope-container{
-  text-align:center;
-  cursor:pointer;
-}
-
-#envelope{
-  width:200px;
+#envelope-container {
+  text-align: center;
+  cursor: pointer;
+  margin-top: -40px; /* moves everything up */
 }
 
 /* letter */
