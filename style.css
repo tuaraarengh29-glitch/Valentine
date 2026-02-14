@@ -1,80 +1,82 @@
 body {
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#ffeef0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6eaea;
+  font-family: sans-serif;
 }
 
-/* envelope */
+/* Envelope */
 #envelope-container {
   text-align: center;
   cursor: pointer;
-  margin-top: -40px; /* moves everything up */
+  margin-top: -40px;
 }
 
-/* letter */
-#letter-container{
-  display:none;
-  position:fixed;
-  inset:0;
-  justify-content:center;
-  align-items:center;
+#envelope {
+  width: 200px;
 }
 
-.letter-window{
-  background:white;
-  padding:40px;
-  border-radius:20px;
-  text-align:center;
+/* Letter Screen */
+#letter-container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
 }
 
-/* bouquet bounce */
-.bounce{
-  width:250px;
-  animation:bounce 1s infinite;
+/* Window */
+.letter-window {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
 }
 
-@keyframes bounce{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-20px)}
+/* Bouquet */
+.bouquet {
+  width: 200px;
+  animation: bounce 1.5s infinite;
 }
 
-/* buttons */
-.buttons{
-  margin-top:20px;
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-.btn{
-  width:120px;
-  cursor:pointer;
-  margin:10px;
-}
-
-/* strong NO shake */
-.no-btn:hover{
-  animation:shake .3s infinite;
-}
-
-@keyframes shake{
-  0%{transform:translateX(0)}
-  25%{transform:translateX(-10px)}
-  50%{transform:translateX(10px)}
-  75%{transform:translateX(-10px)}
-  100%{transform:translateX(0)}
-}
-
-/* video full screen */
-.love-video{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:none;
-  z-index:999;
+/* Question */
 .question {
   margin: 10px 0;
-  font-size: 24px;
+  font-size: 22px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.yes-btn, .no-btn {
+  width: 100px;
+  cursor: pointer;
+}
+
+/* Video inside window */
+.love-video {
+  width: 250px;
+  border-radius: 12px;
+  display: none;
+  margin-top: 10px;
+}
+
+/* Message */
+.love-message {
+  display: none;
+  margin-top: 10px;
+  font-size: 18px;
 }
