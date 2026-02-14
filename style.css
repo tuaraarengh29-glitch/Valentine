@@ -74,4 +74,7 @@ body {
   object-fit:cover;
   display:none;
   z-index:999;
+.question {
+  margin: 10px 0;
+  font-size: 24px;
 }
