@@ -1,34 +1,34 @@
 // elements
-const envelope = document.getElementById("envelope-container");
-const letter = document.getElementById("letter-container");
-const yesBtn = document.querySelector(".yes-btn");
-const noBtn = document.querySelector(".no-btn");
-const video = document.getElementById("loveVideo");
-const message = document.getElementById("loveMessage");
+const envelope=document.getElementById("envelope-container");
+const letter=document.getElementById("letter-container");
+const yesBtn=document.querySelector(".yes-btn");
+const noBtn=document.querySelector(".no-btn");
+const video=document.getElementById("loveVideo");
+const message=document.getElementById("loveMessage");
 
 
 // open envelope
-envelope.addEventListener("click", () => {
-  envelope.style.display="none";
-  letter.style.display="flex";
+envelope.addEventListener("click",()=>{
+envelope.style.display="none";
+letter.style.display="flex";
 });
 
 
 // YES CLICKED
-yesBtn.addEventListener("click", () => {
+yesBtn.addEventListener("click",()=>{
 
-  document.querySelector(".bouquet").style.display="none";
-  document.querySelector(".buttons").style.display="none";
-  document.querySelector(".question").style.display="none";
+document.querySelector(".bouquet").style.display="none";
+document.querySelector(".buttons").style.display="none";
+document.querySelector(".question").style.display="none";
 
-  video.style.display="block";
-  message.style.display="block";
+video.style.display="block";
+message.style.display="block";
 
-  video.muted=false;
-  video.volume=1;
-  video.play();
+video.muted=false;
+video.volume=1;
+video.play();
 
-  launchConfetti();
+launchConfetti();
 });
 
 
@@ -55,11 +55,6 @@ const x=Math.random()*200-100;
 const y=Math.random()*200-100;
 noBtn.style.transform=`translate(${x}px,${y}px)`;
 
-// change text (image alt)
-if(noClickCount<noMessages.length){
-noBtn.alt=noMessages[noClickCount];
-}
-
 // grow YES button
 yesScale+=0.3;
 yesBtn.style.transform=`scale(${yesScale})`;
@@ -73,16 +68,20 @@ noBtn.style.display="none";
 }
 
 
-// ===== CONFETTI =====
+// ===== REAL CONFETTI =====
 
 function launchConfetti(){
 for(let i=0;i<80;i++){
+
 const conf=document.createElement("div");
 conf.className="confetti";
+
 conf.style.left=Math.random()*100+"vw";
 conf.style.background=`hsl(${Math.random()*360},100%,50%)`;
+conf.style.animationDuration=Math.random()*2+2+"s";
+
 document.body.appendChild(conf);
 
-setTimeout(()=>conf.remove(),3000);
+setTimeout(()=>conf.remove(),4000);
 }
 }
