@@ -1,43 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Valentine</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Letter</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ENVELOPE SCREEN -->
+<!-- Envelope Screen -->
 <div id="envelope-container">
   <img src="envelope.png" id="envelope">
   <p>♡ Letter for You ♡</p>
 </div>
 
-<!-- LETTER SCREEN -->
+<!-- Letter Screen -->
 <div id="letter-container">
 
   <div class="letter-window">
 
-    <!-- BOUQUET IMAGE (REPLACES TITLE + CAT) -->
-    <img src="bouquet.JPG" id="bouquet" class="bounce">
+    <!-- Bouquet Image -->
+    <img src="bouquet.jpg" class="bouquet">
+
+    <!-- Question -->
     <h2 class="question">Will you be my Valentine?</h2>
 
+    <!-- YES / NO Buttons -->
     <div class="buttons">
-      <img src="yes.png" class="btn yes-btn">
-      <img src="no.png" class="btn no-btn">
+      <img src="yes.png" class="yes-btn">
+      <img src="no.png" class="no-btn">
     </div>
+
+    <!-- Video -->
+    <video id="loveVideo" class="love-video" playsinline>
+      <source src="love.mp4" type="video/mp4">
+    </video>
+
+    <!-- Message -->
+    <p id="loveMessage" class="love-message">
+      I really like you ❤️ <br>
+      This bouquet is for you.
+    </p>
 
   </div>
 
 </div>
 
-<!-- VIDEO -->
-<video id="loveVideo" class="love-video" muted playsinline>
-  <source src="love.mp4" type="video/mp4">
-</video>
-
 <script src="script.js"></script>
-
 </body>
 </html>
